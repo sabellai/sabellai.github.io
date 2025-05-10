@@ -1,12 +1,12 @@
 ﻿////////////////////////////////// everything below here is for the welcome header
 
 var msg1 = "Hello! I am Isabella.";
-var msg2 = "Hola! Soy Isabella.";
-var msg3 = "Oi! Eu sou Isabella.";
-var msg4 = "Bonjour! Je m'appelle Isabella.";
-var msg5 = "Hallo! Ich bin Isabella.";
-var msg6 = "Hoi! Ik ben Isabella.";
-var msg7 = "안녕하세요! 저는 이사벨라 입니다."; //defines all the possible messages 
+var msg2 = "Hoi! Ik ben Isabella.";
+var msg3 = "Hola! Soy Isabella.";
+var msg4 = "Salut! Moi, c'est Isabella"
+var msg5 = "Oi! Eu sou Isabella.";
+var msg6 = "Hallo! Ich bin Isabella.";
+var msg7 = "안녕! 저는 이사벨라 입니다."; //defines all the possible messages 
 
 var tb8_messages = [msg1, msg2, msg3, msg4, msg5, msg6, msg7]; // defines tb8_messages as the msg variables stuck together
 

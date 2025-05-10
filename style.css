@@ -3,8 +3,10 @@
 }
 
 html {
-	height: 100%;
-    width: 100%;
+	height: 100vh;
+    max-width: 100vw;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 input, p, h3, h2, h1, header {
@@ -12,19 +14,14 @@ input, p, h3, h2, h1, header {
 }
 
 body, section.main {
-	background-color: #632912;
+	background-color: #f4b266;
 	color: #a6ced8;
 	height: 100%;
 }
 
 section.right, section.navbar {
-	background-color: #331104;
+	background-color: #632912;
 	color: #a6ced8;
-}
-
-.light-mode {
-	background-color: #a6ced8;
-	color: #632912;
 }
 
 .primary {
@@ -101,7 +98,7 @@ img.aboutme {
 	margin: 20px;
 }
 
-section.right ul li {
+section.main ul li {
 	padding: 5px;
 	list-style-image: url('list style image.png');
 }
@@ -129,11 +126,15 @@ section#projects div {
 section.main {
 	position: absolute;
 	min-height: 1024px;
-	width: 75%;
+	width: 100%;
 	/*background-image: url('background-.png');
 	background-repeat: repeat;
 	background-position: center; 
 	the concept is to have my art repeat over and over again as you scroll, to make the website more lively and less empty. but i need more art */
+}
+
+section#projects.main{
+	width: 75%;
 }
 
 section.navbar {	
@@ -145,13 +146,15 @@ section.navbar {
 }
 
 	section.navbar ul {
-		background-color: #FBC48E;
+		background-color: #f4b266;
+		max-width: 330px; /* if img is on, this should be 370px */
 		margin-right: 10px;
-		width: 310px;
 		margin-left: 20px;
 		height: 30px;
 		margin-top: 20px;
+		padding-left: 0px;
 	}
+
 
 	section.navbar li {
 		display: inline-block;
@@ -167,38 +170,10 @@ section.navbar {
 		color: #bf442b;
 	}
 
-	.lightswitch {
-		width: 25px;
-		height: 25px;
-		display: inline-block;
-		margin-left: -30px;
-		margin-top: 2px;
-		padding: 2px;
-		border: none;
-	}
-
-div#welcome {
-	margin: auto;
-	background-color: #bf442bCC;
-	width: 80%;
-	height: 40%;
-	overflow: visible;
-	padding: 10px;
-	margin-top: 50px;
-}
-
 	@font-face {
 		font-family: billo;
 		src: url(https://dl.dropbox.com/s/klv8tmajlqrb2xz/BILLO___.TTF);
 		}
-
-	header#header-text {
-		font-size: 104px;
-		text-align: center;
-		color: #a6ced8;
-		text-shadow: 3px 3px #33b7d1;
-		font-family: billo;
-	}
 
 article.resume div {
 	width: 80%;
@@ -218,20 +193,155 @@ article.resume div {
 	position: relative;
 }
 
-.checkbox:checked:after {
-	content: '\2714';
-	font-size: 14px;
-	position: absolute;
-	top: 0px;
-	left: 3px;
-	color: #632912;
-	margin-top: -5px;
-}
+	.checkbox:checked:after {
+		content: '\2714';
+		font-size: 14px;
+		position: absolute;
+		top: 0px;
+		left: 3px;
+		color: #632912;
+		margin-top: -5px;
+	}
 
 section#projects div.invis {
 	background-color: transparent;
 	max-width: none;
 	width: 99%;
+}
+
+section#index.main div {
+	margin: auto;
+	margin-top: 30px;
+}
+
+section#index.main div#welcome {
+		margin: auto;
+		background-color: #bf442b;
+		max-width: 90vw;
+		height: 15vw;
+		overflow: visible;
+		padding: 10px;
+		margin-top: 50px;
+		border-radius: 40px;
+	}
+	
+	header#header-text {
+		font-size: 8vw;
+		color: #a6ced8;
+		text-shadow: 3px 3px #33b7d1;
+		font-family: billo, bagel fat one;
+		text-align: center;
+		vertical-align: middle;
+		padding-top: 3%;
+	}
+
+section#index.main article {
+	width: 100%;
+	height: 1000px;
+	margin: auto;
+}
+
+article div {
+	vertical-align: center;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	z-index: 10;
+}
+
+section#index.main article#past {
+	background-color: #a6ced8;
+}
+
+section#index.main article#xp {
+	background-color: #f4b266;
+	width: 100vw;
+	max-height: 90vh;
+}
+
+	div#flowerpot {
+		background-color: transparent;
+		overflow: hidden;
+		max-width: none;
+		max-height: none;
+		margin-top: 0px;
+		display: grid;
+		padding-top: 2vh;
+		padding-bottom: 2vh;
+		justify-content: center;
+		gap: 2px;
+		grid-template-columns: repeat(2, 40vw);
+		grid-template-rows: repeat(2, 40vh);
+		border-radius: 0px;
+	}
+
+	div.flower {
+		width: 40vw;
+		height: 40vh;
+	}
+
+		div#topl {
+			float: left;
+			border-radius: 0px 40px 40px 40px;
+			}
+		
+		div#topr {
+			float: right;
+			border-radius: 40px 0px 40px 40px;
+			}
+		
+		div#botl {
+			float: left;
+			border-radius: 40px 40px 40px 0px;
+			}
+			
+		div#botr {
+			float: right;
+			border-radius: 40px 40px 0px 40px;
+			}
+
+section#index.main article#now {
+	background-color: #a6ced8;
+}
+
+section#index.main article#spare {
+	background-color: #f4b266;
+}
+
+section#index.main article#future {
+	background-color: #a6ced8;
+	padding-top: 10vh;
+}
+
+section#index.main article#past,
+section#index.main article#xp,
+section#index.main article#now,
+section#index.main article#spare,
+section#index.main article#future {
+	margin-top: -10vh;
+	--mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 70%, 
+      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 50% / 100% 100% repeat-x;
+  
+  border: hidden;
+  -webkit-mask: var(--mask); 
+  mask: var(--mask);
+}
+
+section#index.main article#past,
+section#index.main article#xp,
+section#index.main article#now,
+section#index.main article#spare,
+section#index.main article#future {
+	margin-bottom: -10vh;
+	--mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 0) 0,   rgba(0,0,0, 0) 0%, 
+      rgba(0,0,0, 1) 10%, rgba(0,0,0, 1) 0
+  ) 50% 100% / 100% 100% repeat-x;
+  
+  border: hidden;
+  -webkit-mask: var(--mask); 
+  mask: var(--mask);;
 }
 
 @media only screen and (min-width: 720px) { /* FOR NOT PHONES */
@@ -256,12 +366,21 @@ section#projects div.invis {
 
 @media only screen and (max-width: 719px) { /* FOR PHONES */
 
+	section#projects.main {
+		width: 99%;
+	}
+	
+	section#projects div {
+		max-width: none;
+		width: 90%;
+	}
+
 	section.right {
 		width: 100%;
 		height: auto;
 		overflow-y: auto;
 		position: relative;
-		background-color: #33110488;
+		background-color: #63291288;
 		margin-top: 30px;
 	}
 
@@ -290,7 +409,7 @@ section#projects div.invis {
 		margin: 0px;
 	}
 
-	div#welcome, section#projects div.primary {
+	section#index.main div#welcome, section#projects div.primary {
 		margin-top: 100px;
 	}
 

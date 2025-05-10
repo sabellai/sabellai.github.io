@@ -10,135 +10,90 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Monofett&family=Potta+One&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
 		</head>
 	<body>
 		<section class="main" id="index">
-			<div id="welcome">
-				<!-- the div is here to make sure the header doesn't move anything outside this div when the header becomes longer -->
-				<header id="header-text">Hello! I'm Bella</header> <!-- might wanna change the font for this bc of the korean -->
-				</div>
-			<article class="resume">
-				<div class="primary">
-					<h2>@Resume!</h2>
-					<p>I've racked up some experience in the last few years. You can see everything I've done below this box.<br>Would you like to filter?</p>
-					<div class="checkboxes">
-						<input type="checkbox" id="tech" data-filter="technology" class="checkbox"><label for="tech">Technology</label><br>
-						<input type="checkbox" id="art" data-filter="art" class="checkbox"><label for="art">Art</label><br>
-						</div>
+			<article id="landing">
+				<div id="welcome">
+					<!-- the div is here to make sure the header doesn't move anything outside this div when the header becomes longer -->
+					<header id="header-text">Hello! I'm Isabella</header>
 					</div>
-				<div class="experience-container" data-category="art">
-					<h2>@GBK Entertainment</h2><br>
-					<h3>2023 - Present</h3>
-					<p>Professionally trained in dance, singing, rapping, acting, MC-ing, modeling, composing. I started in August of 2023, and I'm still training.</p>
-					<div data-category="art"> </div>
+					
+				<div>
+					<ul>
+						<li><h3>Student, Artist, Webdeveloper</h3></li>
+						<li><h3>Fluent in English, Dutch, Portuguese</h3></li>
+						<li><h3>Amsterdam, Netherlands <a target="_blank" href="https://time.is/Amsterdam">(CET)</a></h3></li>
+						<li><h3><a href="mailto:braamisabella@gmail.com">E-mail, </a><a href="https://www.linkedin.com/in/isabella-braam-368896247/">LinkedIn</a></h3></li>
 					</div>
-				<div class="experience-container" data-category="art">
-					<h2>@Meervaart Jong</h2><br>
-					<h3>2023 - Present</h3>
-					<p>Professional training in streetdance at Meervaart Jong. Still ongoing.</p>
-					<div data-category="art"> </div>
-					</div>
-				<div class="experience-container" data-category="art">
-					<h2>@Amsterdam Dance Centre</h2><br>
-					<h3>2022 - 2023</h3>
-					<p>Training in streetdance.</p>
-					<div data-category="art"> </div>
-					</div>
-				<div class="experience-container" data-category="tech">
-					<h2>@Metis Montessori Lyceum</h2><br>
-					<h3>2021 - 2027</h3>
-					<p><a target="_blank" href="https://hetmml.nl/vakken/coderclass/">Completed several programming language courses</a> whilst doing the normal high school courses.</p>
-					<div data-category="technology"> </div>
-					</div>
-				<div class="experience-container" data-category="art">
-					<h2>@Koninklijk Theater Carre Amsterdam</h2><br>
-					<h3>2018</h3>
-					<p>Performed in front of a live audience, as well as national TV, on remembrance day.</p>
-					<div data-category="art"> </div>
-					</div>
-				<div class="experience-container" data-category="art">
-					<h2>@Meervaart (Jong)</h2><br>
-					<h3>2017 - 2021</h3>
-					<p>Professional training in streetdance and theatre at Meervaart Jong. Performed streetdance and theatre at Theater de Meervaart 1-2 times per year.</p>
-					<div data-category="art"> </div>
-					</div>
-				<div class="experience-container" data-category="art">
-					<h2>@DOS Amsterdam</h2><br>
-					<h3>2017 - 2019</h3>
-					<p>Professional training in athletics. Competed in athletic championships, of which I always won between first and third place.</p>
-					<div data-category="art"> </div>
+			</article>
+			
+			
+			<article id="past">
+				<div>
+					<h3>My past</h3>
+					<p>I've been interested in tech all my life, and started
+					my programming journey when I was 12. I love making websites and learning more programming languages in my free
+					time. I've studied study many programming languages at school, inluding HTML, CSS,
+					Javascript, C#, and Python.</p>
 					</div>
 				</article>
-				<script>
-					const filterButtons = document.querySelectorAll('.checkboxes input[type="checkbox"]');
-					const experienceContainers = document.querySelectorAll('.experience-container');
-					const filterButton = document.getElementById('filterButton');
-
-					filterButtons.forEach(button => {
-					button.addEventListener('change', handleFilter);
-					});
-
-					function handleFilter(event) {
-						const selectedCategories = document.querySelectorAll('.checkboxes input[type="checkbox"]:checked');
-						const selectedCategoriesArray = Array.from(selectedCategories).map(checkbox => checkbox.dataset.filter);
-
-						experienceContainers.forEach(container => {
-							const containerCategory = container.querySelector('div[data-category]').dataset.category;
-
-							// Check if containerCategory matches any of the selectedCategories
-							const shouldShow = selectedCategoriesArray.includes(containerCategory) || !containerCategory;
-
-							if (shouldShow) {
-								container.style.display = "block"; // Show the container
-							} else {
-								container.style.display = "none"; // Hide the container
-							}
-						});
-					}
-					</script>
+				
+			
+			<article id="xp">
+				<div id="flowerpot">
+					<div class="flower" id="topl">
+						<h3>Experience</h3>
+						<p>I often enrich my knowledge in my free time to challenge and improve myself with new things and refresh what I already know, so I've racked up some experience in the last few years. Here are some that i've highlighted!</p>
+						</div>
+					<div class="flower" id="topr">
+						</div>
+					<div class="flower" id="botl">
+						</div>
+					<div class="flower" id="botr">
+						</div>
+						</div>
+				</article>
+				
+			
+			<article id="now">
+				<div>
+					<h3>Now <a target="_blank" href="https://nownownow.com/about">(?)</a></h3>
+					<p>Still in highschool, year 4 of VWO level. Working on a few projects I might reveal soon (very excited)!
+					<br>Learning to accept and express myself (as you may be able to tell by the amount of "personality" in this site). Rediscovering my love for the arts. Overall in my "era" of personal growth. :)</p>
+					</div>
+				</article>
+				
+			
+			<article id="spare">
+				<div>
+					<h3>Spare time</h3>
+					<p>Outside of of school and technology, I enjoy playing the piano, playing the kalimba, and exposing myself to art and new ideas to
+					stay open-minded and creative. And even though I love coding, I also enjoy learning non-programming languages; I'm fluent in English, Dutch, Portuguese, and I'm
+					learning French, German, and Korean.</p>
+					</div>
+				</article>
+				
+			
+			<article id="future">
+					<div>
+					<h3>My future</h3>
+					<p>I've always struggled to think about what I want for my future, because I love two opposites; arts and computers. Therefore, I hope that I can find a way to combine the two in the future.
+					<br>And so, I aim to dive deeper into game development; the perfect combination of the two. Webdevelopment is a close second, so I'll be maintaining my skills there as well.</p>
+					</div>
+				</article>
+			
 			</section>
-		<section class="right">
-			<div>	
-				<img class="aboutme" src="Isabella.jpg" alt="A picture of Isabella">
-				<h2>@ISABELLA BRAAM</h2>
-				<img src="sabellai logo.png" alt="Sabellai Logo" class="logo"> <h3 class="right">@sabellai</h3>
-				</div>
-			<div>
-				<ul>
-					<li><h3>Student, Artist, Webdeveloper</h3></li>
-					<li><h3>Fluent in English, Dutch, Portuguese</h3></li>
-					<li><h3>Amsterdam, Netherlands <a target="_blank" href="https://time.is/Amsterdam">(CET)</a></h3></li>
-					<li><h3><a href="mailto:braamisabella@gmail.com">E-mail, </a><a href="https://www.linkedin.com/in/isabella-braam-368896247/">LinkedIn</a></h3></li>
-				</div>
-			<div>
-				<h3>My past</h3>
-				<p>I've been interested in tech all my life, and started
-				my programming journey when I was 12. I love making websites and learning more programming languages in my free
-				time. I've studied study many programming languages at school, inluding HTML, CSS,
-				Javascript, C#, and Python.</p>
-				</div>
-			<a id="now"><div>
-				<h3>Now <a target="_blank" href="https://nownownow.com/about">(?)</a></h3>
-				<p>Still in highschool, year 4 of VWO level. Working on a few projects I might reveal soon (very excited)!
-				<br>Learning to accept and express myself (as you may be able to tell by the amount of "personality" in this site). Rediscovering my love for the arts. Overall in my "era" of personal growth. :)</p>
-				</div></a>
-			<div>
-				<h3>My future</h3>
-				<p>I've always struggled to think about what I want for my future, because I love two opposites; arts and computers. Therefore, I hope that I can find a way to combine the two in the future.
-				<br>And so, I aim to dive deeper into game development; the perfect combination of the two. Webdevelopment is a close second, so I'll be maintaining my skills there as well.</p>
-				</div>
-			<div id="personal">
-				<h3>Spare time</h3>
-				<p>Outside of of school and technology, I enjoy playing the piano, playing the kalimba, and exposing myself to art and new ideas to
-				stay open-minded and creative. And even though I love coding, I also enjoy learning non-programming languages; I'm fluent in English, Dutch, Portuguese, and I'm
-				learning French, German, and Korean.</p>
-				</div>
+
 			</section>
 		<section class="navbar">
 			<ul>
-				<!-- <li><button class="lightswitch">&#127763;</button></li> -->
+				<!-- <li><img src="sabellai logo.png" width="40"></li> --!>
 				<li><a href="index.html"><h3>Home</h3></a></li>
-				<li><a href="projects.html"><h3>Projects</h3></a></li>
+				<li><a href="projects.html"><h3>Experience</h3></a></li>
 				<li><a href="Resume Braam, Isabella.pdf"><h3>Resume PDF</h3></a></li>
 				</ul>
 			</section>
