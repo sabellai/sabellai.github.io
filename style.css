@@ -225,6 +225,11 @@ section#index.main div#welcome {
 		border-radius: 40px;
 	}
 	
+	div#welcome {
+		background-image: url('gif.star.gif');
+		background-blend-mode: overlay;
+	}
+	
 	header#header-text {
 		font-size: 8vw;
 		color: #a6ced8;
@@ -243,7 +248,7 @@ section#index.main article {
 
 article div {
 	vertical-align: center;
-	margin-top: 10vh;
+	margin-top: 300vh; /* 10vh */
 	margin-bottom: 10vh;
 	z-index: 10;
 }
@@ -423,7 +428,7 @@ section#index.main article#future {
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
-    scrollbar-width: auto;
+	scrollbar-width: auto;
     scrollbar-color: #fbc48e #bf442b;
   }
 
