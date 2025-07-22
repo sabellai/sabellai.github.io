@@ -248,9 +248,9 @@ section#index.main article {
 }
 
 section#index.main article#past,
-section#index.main article#now,
-section#index.main article#future {
-	padding-top: 45vh;
+section#index.main article#now {
+	padding-top: 25vh;
+	padding-bottom: 25vh;
 }
 
 section#index.main article#landing {
@@ -263,8 +263,10 @@ section#index.main article#past {
 }
 
 section#index.main article#xp {
-	padding-top: 10vh;
 	background-color: #f4b266;
+	height: 70vh;
+	padding-top: 0vh;
+	padding-bottom: 8vh;
 }
 
 	article div {
@@ -317,25 +319,14 @@ section#index.main article#xp {
 
 section#index.main article#now {
 	background-color: #a6ced8;
-}
-
-section#index.main article#spare {
-	background-color: #f4b266;
-	padding-top: 30vh;
-}
-
-section#index.main article#future {
-	background-color: #a6ced8;
-	padding-bottom: 0vh;
+	padding-bottom: 3vh;
 }
 
 /* fades out the bottom */
 /* rgba(0,0,0, 1) 0 = colorcode(r,g,b, transparency from 0-1) location within the gradient */
 section#index.main article#landing,
 section#index.main article#past,
-section#index.main article#xp,
-section#index.main article#now,
-section#index.main article#spare {
+section#index.main article#xp {
   --mask: linear-gradient(to bottom,
       rgba(0,0,0, 0) 0, rgba(0,0,0, 1) 20%,
       rgba(0,0,0, 1) 80%, rgba(0,0,0, 0) 100%
@@ -346,15 +337,9 @@ section#index.main article#spare {
   mask: var(--mask);
 }
 
-section#index.main article#future {
-	--mask: linear-gradient(to bottom,
-      rgba(0,0,0, 0) 0, rgba(0,0,0, 1) 20%,
-      rgba(0,0,0, 1) 80%
-  ) 100% 50% / 100% 100% repeat-x;
-
-  border: hidden;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
+section#index.main article#now {
+	background-image: linear-gradient(175deg,
+      rgba(244, 178, 102, 1) 0, rgba(244, 178, 102, 1) 35%, rgba(166, 206, 216, 1) 60%);
 }
 
 div.slideshow {
@@ -397,6 +382,22 @@ div.flower div.slideshow img {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	display: inline-block;
+}
+
+.maincont {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	gap: 10px;
+}
+
+.mainleft {
+	grid-column-start: 2;
+	grid-column-end: 4;
+}
+
+.mainright {
+	grid-column-start: 3;
+	grid-column-end: 5;
 }
 
 @media only screen and (min-width: 720px) { /* FOR NOT PHONES */
