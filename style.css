@@ -241,16 +241,21 @@ section#index.main div#welcome {
 	}
 
 section#index.main article {
-	width: 100%;
-	height: 1000px;
+	width: 100vw;
+	height: 80vh;
 	margin: auto;
+	padding-bottom: 10vh;
 }
 
-article div {
-	vertical-align: center;
-	margin-top: 300vh; /* 10vh */
-	margin-bottom: 10vh;
-	z-index: 10;
+section#index.main article#past,
+section#index.main article#now,
+section#index.main article#future {
+	padding-top: 45vh;
+}
+
+section#index.main article#landing {
+	padding-top: 10vh;
+	height: 55vh;
 }
 
 section#index.main article#past {
@@ -258,31 +263,37 @@ section#index.main article#past {
 }
 
 section#index.main article#xp {
+	padding-top: 10vh;
 	background-color: #f4b266;
-	width: 100vw;
-	max-height: 90vh;
 }
+
+	article div {
+		vertical-align: center;
+	}
 
 	div#flowerpot {
 		background-color: transparent;
 		overflow: hidden;
-		max-width: none;
-		max-height: none;
-		margin-top: 0px;
+		max-width: 80vw;
+		max-height: 60vh;
 		display: grid;
-		padding-top: 2vh;
-		padding-bottom: 2vh;
+		padding-top: 5vh;
+		padding-bottom: 5vh;
 		justify-content: center;
 		gap: 2px;
 		grid-template-columns: repeat(2, 40vw);
-		grid-template-rows: repeat(2, 40vh);
+		grid-template-rows: repeat(2, 30vh);
 		border-radius: 0px;
 	}
 
 	div.flower {
 		width: 40vw;
-		height: 40vh;
+		height: 30vh;
 	}
+	
+		div.flower div {
+			margin: 5px;
+		}
 
 		div#topl {
 			float: left;
@@ -310,43 +321,82 @@ section#index.main article#now {
 
 section#index.main article#spare {
 	background-color: #f4b266;
+	padding-top: 30vh;
 }
 
 section#index.main article#future {
 	background-color: #a6ced8;
-	padding-top: 10vh;
+	padding-bottom: 0vh;
 }
 
+/* fades out the bottom */
+/* rgba(0,0,0, 1) 0 = colorcode(r,g,b, transparency from 0-1) location within the gradient */
+section#index.main article#landing,
 section#index.main article#past,
 section#index.main article#xp,
 section#index.main article#now,
-section#index.main article#spare,
-section#index.main article#future {
-	margin-top: -10vh;
-	--mask: linear-gradient(to bottom, 
-      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 70%, 
-      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+section#index.main article#spare {
+  --mask: linear-gradient(to bottom,
+      rgba(0,0,0, 0) 0, rgba(0,0,0, 1) 20%,
+      rgba(0,0,0, 1) 80%, rgba(0,0,0, 0) 100%
   ) 100% 50% / 100% 100% repeat-x;
-  
+
   border: hidden;
-  -webkit-mask: var(--mask); 
+  -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
-section#index.main article#past,
-section#index.main article#xp,
-section#index.main article#now,
-section#index.main article#spare,
 section#index.main article#future {
-	margin-bottom: -10vh;
-	--mask: linear-gradient(to bottom, 
-      rgba(0,0,0, 0) 0,   rgba(0,0,0, 0) 0%, 
-      rgba(0,0,0, 1) 10%, rgba(0,0,0, 1) 0
-  ) 50% 100% / 100% 100% repeat-x;
-  
+	--mask: linear-gradient(to bottom,
+      rgba(0,0,0, 0) 0, rgba(0,0,0, 1) 20%,
+      rgba(0,0,0, 1) 80%
+  ) 100% 50% / 100% 100% repeat-x;
+
   border: hidden;
-  -webkit-mask: var(--mask); 
-  mask: var(--mask);;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+div.slideshow {
+	width: 45%;
+	height: 80%;
+	background-color: transparent;
+	margin-right: 20px;
+}
+
+
+div#ef {
+	width: 45%;
+	float: right;
+	padding: 0px;
+	margin-right: 20px;
+	overflow: hidden;
+}
+
+div.flower div.slideshow img {
+	max-width: 70%;
+	object-fit: cover;
+	float:right;
+	margin-right: 20px;
+}
+
+.floatr {
+	float: right;
+	height: 70%;
+	margin-right: 20px;
+	width: 40%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.floatl {
+	float: left;
+	margin-left: 20px;
+	width: 45%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: inline-block;
 }
 
 @media only screen and (min-width: 720px) { /* FOR NOT PHONES */
