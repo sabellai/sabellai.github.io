@@ -1,4 +1,4 @@
-* {
+*, body {
 	margin: 0px;
 }
 
@@ -16,7 +16,6 @@ input, p, h3, h2, h1, header {
 body, section.main {
 	background-color: #f4b266;
 	color: #a6ced8;
-	height: 100%;
 }
 
 section.right, section.navbar {
@@ -72,12 +71,144 @@ img, div, input, button {
 }
 
 div {
-	background-color: #33b7d1CC;
 	max-width: 800px;
 	max-height: 600px;
 	margin: 20px;
 	overflow-y: auto;
 	overflow-x: hidden;
+	background-color: #33b7d1CC;
+}
+
+div {
+	padding: 10px;
+}
+
+.floatr {
+	float: none;
+	max-height: 300px;
+	margin: auto;
+	margin-top: 20px;
+	display: block;
+}
+
+.floatl {
+	display: block;
+	float: none;
+	width: 80%;
+	margin: auto;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	
+}
+
+section#index article {
+	max-height: 80vh;
+}
+
+section.main,
+section#index,
+section#projects {
+	margin-bottom: 5px;
+}
+
+section.main {
+	width: 100vw;
+	height: auto;
+	position: relative;
+	/*background-image: url('background-.png');
+	background-repeat: repeat;
+	background-position: center; 
+	the concept is to have my art repeat over and over again as you scroll, to make the website more lively and less empty. but i need more art */
+}
+
+section.right {
+	width: 100vw;
+	height: auto;
+	overflow-y: auto;
+	position: relative;
+	background-color: #63291288;
+	margin-top: 30px;
+}
+
+div.mainright,
+div.mainleft {
+	max-height: 40vh;
+	margin: 5px;
+}
+
+img.floatr{
+	object-fit: cover;
+	max-width: 80%;
+	height: 80%;
+}
+
+section#index div,
+section#projects div {
+	width: 80%;
+}
+
+section#projects div {
+	max-height: 60%;
+	margin: auto;
+	margin-top: 3%;
+}
+
+section#projects.main {
+	width: 100%;
+}
+
+section.right div h2 {
+	color: #331104;
+}
+
+div.experience-container div {
+	padding: 0px;
+	margin: 0px;
+}
+
+section#projects div.primary {
+	margin-top: 100px;
+}
+
+.maincont {
+	row-gap: 5vh;
+}
+
+section#index.main article#xp {
+	height: 80vh;
+}
+
+div#flowerpot {
+	background-color: transparent;
+	display: grid;
+	overflow: hidden;
+	justify-content: center;
+	grid-template-columns: repeat(2, 40vw);
+	grid-template-rows: repeat(2, 30vh);
+	border-radius: 0px;
+	padding: 0px;
+	margin: auto;
+	row-gap: 3vh;
+	column-gap: 2vw;
+	height: 65vh;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}
+
+section.right div:first-child {
+	background-color: #bf442b;
+}
+
+section#index.main article#landing {
+	padding-bottom: 0px;
+	padding-top: 10vh;
+	height: 55vh;
+}
+
+section#index.main article#landing div {
+	min-height: 10vh;
+	max-height: 20vh;
+	margin-bottom: 5vh;
 }
 
 h3.right {
@@ -103,13 +234,6 @@ section.main ul li {
 	list-style-image: url('list style image.png');
 }
 
-section#projects div {
-	width: 80%;
-	max-height: 60%;
-	margin: auto;
-	margin-top: 3%;
-}
-
 	section#projects div h2, section#projects div p {
 		float: right;
 		display: block;
@@ -122,20 +246,6 @@ section#projects div {
 		max-width: 80%;
 		margin: 10px;
 	}
-
-section.main {
-	position: absolute;
-	min-height: 1024px;
-	width: 100%;
-	/*background-image: url('background-.png');
-	background-repeat: repeat;
-	background-position: center; 
-	the concept is to have my art repeat over and over again as you scroll, to make the website more lively and less empty. but i need more art */
-}
-
-section#projects.main{
-	width: 75%;
-}
 
 section.navbar {	
 	position: fixed;
@@ -215,51 +325,38 @@ section#index.main div {
 }
 
 section#index.main div#welcome {
-		margin: auto;
-		background-color: #bf442b;
-		max-width: 90vw;
-		height: 15vw;
-		overflow: visible;
-		padding: 10px;
-		margin-top: 50px;
-		border-radius: 40px;
-	}
-	
-	div#welcome {
-		background-image: url('gif.star.gif');
-		background-blend-mode: overlay;
-	}
+	max-width: 90vw;
+	height: 17vw;
+	padding: 10px;
+	border-radius: 40px;
+	margin: auto;
+	margin-top: 50px;
+	background-color: #bf442b;
+	overflow: visible;
+	background-image: url('gif.star.gif');
+	background-blend-mode: overlay;
+}
 	
 	header#header-text {
 		font-size: 8vw;
 		color: #a6ced8;
 		text-shadow: 3px 3px #33b7d1;
-		font-family: billo, bagel fat one;
+		font-family: billo, 'bagel fat one';
 		text-align: center;
-		vertical-align: middle;
 		padding-top: 3%;
 	}
 
-section#index.main article {
+section.main article {
 	width: 100vw;
 	height: 80vh;
 	margin: auto;
 	padding-bottom: 10vh;
 }
 
-section#index.main article#past,
-section#index.main article#now {
-	padding-top: 25vh;
-	padding-bottom: 25vh;
-}
-
-section#index.main article#landing {
-	padding-top: 10vh;
-	height: 55vh;
-}
-
 section#index.main article#past {
 	background-color: #a6ced8;
+	padding-top: 25vh;
+	padding-bottom: 25vh;
 }
 
 section#index.main article#xp {
@@ -268,25 +365,6 @@ section#index.main article#xp {
 	padding-top: 0vh;
 	padding-bottom: 8vh;
 }
-
-	article div {
-		vertical-align: center;
-	}
-
-	div#flowerpot {
-		background-color: transparent;
-		overflow: hidden;
-		max-width: 80vw;
-		max-height: 60vh;
-		display: grid;
-		padding-top: 5vh;
-		padding-bottom: 5vh;
-		justify-content: center;
-		gap: 2px;
-		grid-template-columns: repeat(2, 40vw);
-		grid-template-rows: repeat(2, 30vh);
-		border-radius: 0px;
-	}
 
 	div.flower {
 		width: 40vw;
@@ -319,7 +397,10 @@ section#index.main article#xp {
 
 section#index.main article#now {
 	background-color: #a6ced8;
-	padding-bottom: 3vh;
+	padding-top: 15vh;
+	overflow: auto;
+	background-image: linear-gradient(175deg,
+      rgba(244, 178, 102, 1) 0, rgba(244, 178, 102, 1) 35%, rgba(166, 206, 216, 1) 60%);
 }
 
 /* fades out the bottom */
@@ -337,12 +418,7 @@ section#index.main article#xp {
   mask: var(--mask);
 }
 
-section#index.main article#now {
-	background-image: linear-gradient(175deg,
-      rgba(244, 178, 102, 1) 0, rgba(244, 178, 102, 1) 35%, rgba(166, 206, 216, 1) 60%);
-}
-
-div.slideshow {
+/*div.slideshow {
 	width: 45%;
 	height: 80%;
 	background-color: transparent;
@@ -350,7 +426,7 @@ div.slideshow {
 }
 
 
-div#ef {
+ div#ef {
 	width: 45%;
 	float: right;
 	padding: 0px;
@@ -363,26 +439,12 @@ div.flower div.slideshow img {
 	object-fit: cover;
 	float:right;
 	margin-right: 20px;
-}
+} */
 
-.floatr {
-	float: right;
-	height: 70%;
-	margin-right: 20px;
-	width: 40%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	display: inline-block;
-}
 
-.floatl {
-	float: left;
-	margin-left: 20px;
-	width: 45%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	display: inline-block;
-}
+
+
+
 
 .maincont {
 	display: grid;
@@ -400,6 +462,15 @@ div.flower div.slideshow img {
 	grid-column-end: 5;
 }
 
+html, body {
+	height: 100vh;
+}
+
+html, body, section, article {
+	width: 100vw;
+	margin: 0px;
+}
+
 @media only screen and (min-width: 720px) { /* FOR NOT PHONES */
 
 	section.right, section.main {
@@ -413,67 +484,140 @@ div.flower div.slideshow img {
 	section.right {
 		width: 25%;
 		right: 0;
-		height: 100%;
+		height: 100vh;
 		overflow-y: scroll;
 		position: fixed;
+		margin-top: 0px;
 	}
-
-}
-
-@media only screen and (max-width: 719px) { /* FOR PHONES */
-
-	section#projects.main {
-		width: 99%;
+	
+	.floatr {
+		float: right;
+		height: 70%;
+		margin-right: 20px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+	
+	img.floatr {
+		max-width: 45%;
+	}
+	
+	.floatl {
+		display: inline-block;
+		float: left;
+		width: 45%;
+		margin-left: 20px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	
+	section.main {
+		position: absolute;
+		height: 100vh;
+		width: 100vw;
+	}
+	
+	body, section.main {
+		height: 100vh;
 	}
 	
 	section#projects div {
-		max-width: none;
 		width: 90%;
 	}
-
-	section.right {
-		width: 100%;
-		height: auto;
-		overflow-y: auto;
-		position: relative;
-		background-color: #63291288;
-		margin-top: 30px;
+	
+	section#projects.main{
+		width: 75%;
 	}
-
-	section.right div:first-child {
-		background-color: #bf442b;
+	
+	body,
+	article#resume {
+		margin-left: 0px;
 	}
-
-	section.right div h2 {
-		color: #331104;
+	
+	section#index.main article#landing {
+		padding-bottom: 0px;
+		padding-top: 10vh;
+		height: 60vh;
 	}
-
-	section.main {
-		width: 99%;
-		margin-left: 1%;
-		margin-right: 1%;
-		height: auto;
-		position: relative;
+	
+	section#index.main article#landing div#welcome {
+		height: 24vh;
+		padding-top: 15px;
+		margin-bottom: 5vh;
+		margin-top: 3vh;
+		width: 75%;
 	}
-
-	div {
-		padding: 10px;
-	}
-
-	div.experience-container div {
-		padding: 0px;
-		margin: 0px;
-	}
-
-	section#index.main div#welcome, section#projects div.primary {
-		margin-top: 100px;
-	}
-
+	
 	header#header-text {
-		font-size: 76px;
-		margin: 5px;
-		font-family: billo;
+		font-size: 6vw;
+		padding-top: 2vw;
 	}
+	
+	section#index.main article#landing div {
+		min-height: 0px;
+		max-height: none;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+		position: relative;
+	}
+	
+	section#index article {
+		max-height: 80vh;
+		width: 100vw;
+	}
+	
+	section.main div#flowerpot {
+		max-width: none;
+		max-height: none;
+		width: 98%;
+		height: 65vh;
+		padding-top: 5vh;
+		padding-bottom: 5vh;
+		margin-top: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		grid-template-columns: repeat(2, 40vw);
+		grid-template-rows: repeat(2, 28vh);
+		row-gap: 5vh;
+		column-gap: 1vw;
+	}
+	
+	section.main div#flowerpot div {
+		min-width: 39vw;
+		max-width: 40vw;
+	}
+	
+	section.main article {
+		height: 100vh;
+		width: 100%;
+		margin-left: 0px;
+		float: left;
+		padding-bottom: 10vh;
+	}
+	
+	section.main#projects,
+	section.main article#resume	{
+		overflow: auto;
+	}
+	
+	section.main article#resume{
+		padding-bottom: 10vh;
+		margin-bottom: 10vh;
+	}
+	
+	section.right {
+		background-color: #632912;
+	}
+	
+	section.right div:first-child {
+		background-color: #33b7d1CC;
+	}
+	
+	section.right div h2 {
+		color: #bf442b;
+	}
+	
 }
 
 /* ===== Scrollbar CSS ===== */
