@@ -112,9 +112,10 @@ section#projects {
 }
 
 section.main {
-	width: 100vw;
-	height: auto;
 	position: relative;
+	display: inline-block;
+	max-height: 100vh;
+	width: 100vw;
 	/*background-image: url('background-.png');
 	background-repeat: repeat;
 	background-position: center; 
@@ -126,8 +127,9 @@ section.right {
 	height: auto;
 	overflow-y: auto;
 	position: relative;
-	background-color: #63291288;
+	display: inline-block;
 	margin-top: 30px;
+	background-color: #63291288;
 }
 
 div.mainright,
@@ -190,9 +192,10 @@ div#flowerpot {
 	margin: auto;
 	row-gap: 3vh;
 	column-gap: 2vw;
-	height: 65vh;
+	height: 70vh;
 	margin-top: 5vh;
 	margin-bottom: 5vh;
+	max-height: none;
 }
 
 section.right div:first-child {
@@ -289,6 +292,7 @@ article.resume div {
 	width: 80%;
 	max-height: 60%;
 	overflow: auto;
+	overflow-x: hidden;
 	margin: auto;
 	margin-top: 20px;
 }
@@ -441,11 +445,6 @@ div.flower div.slideshow img {
 	margin-right: 20px;
 } */
 
-
-
-
-
-
 .maincont {
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
@@ -471,22 +470,30 @@ html, body, section, article {
 	margin: 0px;
 }
 
-@media only screen and (min-width: 720px) { /* FOR NOT PHONES */
+@media only screen and (min-width: 950px) { /* FOR NOT PHONES */
 
 	section.right, section.main {
 		top: 70px;
 	}
 
 	div:last-of-type {
-		margin-bottom: 100px;
+		margin-bottom: 50px;
+	}
+	
+	section.main,
+	section.main#projects {
+		max-height: 100vh;
+		width: 100vw;
+		top: 70px;
 	}
 
 	section.right {
 		width: 25%;
-		right: 0;
-		height: 100vh;
+		max-height: 100vh;
 		overflow-y: scroll;
-		position: fixed;
+		position: absolute;
+		top: 70px;
+		right: 0px;
 		margin-top: 0px;
 	}
 	
@@ -510,12 +517,6 @@ html, body, section, article {
 		margin-left: 20px;
 		margin-top: 20px;
 		margin-bottom: 0px;
-	}
-	
-	section.main {
-		position: absolute;
-		height: 100vh;
-		width: 100vw;
 	}
 	
 	body, section.main {
