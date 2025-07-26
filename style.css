@@ -46,7 +46,7 @@ h1, h2 {
 	color: #bf442b;
 }
 
-label, input, p, h3 {
+label, input, p, h3, .potta {
 	font-family: "Potta One", system-ui;
 	font-weight: 400;
 	font-style: normal;
@@ -260,12 +260,13 @@ section.navbar {
 
 	section.navbar ul {
 		background-color: #f4b266;
-		max-width: 330px; /* if img is on, this should be 370px */
+		height: 30px;
+		width: 95vw;
+		padding-left: 0px;
+		
+		margin-top: 20px;
 		margin-right: 10px;
 		margin-left: 20px;
-		height: 30px;
-		margin-top: 20px;
-		padding-left: 0px;
 	}
 
 
@@ -470,6 +471,115 @@ html, body, section, article {
 	margin: 0px;
 }
 
+html,
+body  {
+	height: 100vh;
+	width: 100vw;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin: 0px;
+}
+
+.nownownow,
+.grid {
+	width: 99vw;
+	margin: 0px;
+}
+
+.grid {
+    display: grid;
+	grid-auto-flow: dense;
+	place-content: space-around;
+	gap: 1vw;
+	max-width: none;
+	max-height: none;
+	
+	grid-template-columns: repeat(2, 48vw);
+	grid-template-rows: min-content;
+	
+	margin: auto;
+	background-color: transparent;
+}
+
+.grid-item {
+	grid-column: auto / span 1; grid-row: auto / span 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+	
+	padding-left: 5px;
+	
+	width: 38vw;
+	height: 38vw;
+}
+
+.grid-item-portrait {
+	grid-row: auto / span 2; overflow-y: auto;
+	height: 86vw;
+	width: 38vw;
+	overflow-y:auto;
+}
+
+.grid-item-landscape {
+	grid-column: auto / span 2;
+	width: 88vw;
+	height: 38vw;
+	overflow-x:auto;
+}
+
+.grid-item:nth-child(even) {
+	background-color: #33D19C;
+	color: #a2535a;
+}
+
+.grid-item:nth-child(odd) h2 {
+	color: #a8eef0;
+}
+
+.grid-item:nth-child(odd) {
+	background-color: #e77975;
+	color: #C9B9C4;
+}
+
+.grid-item:nth-child(even) h2 {
+	color: #e51073;
+}
+
+.grid-item img {
+	max-width: 45%;
+	max-height:45%;
+	border-radius: 12px;
+	margin: auto;
+}
+
+.grid-item p {
+	text-align: left;
+}
+
+.grid-item h2,
+.grid-item small {
+	text-align: center;
+}
+
+.grid-item.bgdark h2,
+.grid-item.bgdark small,
+.grid-item.bgdark p {
+	color: white;
+}
+
+section.main.nownownow {
+	height: min-content;
+}
+
+section.nownownow:first-child article {
+	padding-top: 10vh;
+	height: min-content;
+	padding-bottom: 0px;
+}
+
+/******************************************
+ MEDIA QUERIES
+******************************************/
+
 @media only screen and (min-width: 950px) { /* FOR NOT PHONES */
 
 	section.right, section.main {
@@ -617,6 +727,55 @@ html, body, section, article {
 	
 	section.right div h2 {
 		color: #bf442b;
+	}
+	
+	/****************************************
+					   GRID
+	****************************************/
+	
+	section.nownownow {
+		margin-right: 18vw;
+		margin-left: 18vw;
+		height: 100vh;
+		width: 66vw;
+		background-color: #f4bc7b;
+	}
+	
+	section.main.nownownow article {
+		margin-left: 0px;
+		background-color: #f4bc7b;
+	}
+	
+	.grid {
+		width: 100%;
+		padding-top: 50px;
+		margin-left:0px;
+		padding-left:0px;
+		padding-right: 50px;
+		gap: 1vw;
+		grid-template-columns: 12vw 12vw 12vw 12vw;
+		grid-template-rows: min-content;
+	}
+	
+	.grid-item {
+		margin: 0px;
+		height: 12vw;
+		width: 12vw;
+	}
+	
+	.grid-item-landscape {
+		width: 28vw;
+		min-height: 12vw;
+	}
+	
+	.grid-item-portrait {
+		height: 26vw;
+		width: 12vw;
+	}
+	
+	section.nownownow:first-child article,
+	section.nownownow	{
+		padding-top: 5vh;
 	}
 	
 }
